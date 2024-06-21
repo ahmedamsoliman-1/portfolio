@@ -2,7 +2,7 @@
   "name": "portfolio-v",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ahmedamsoliman-1.github.io/a3",
+  "homepage": "https://ahmedamsoliman-1.github.io/portfolio",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
