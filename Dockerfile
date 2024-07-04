@@ -1,19 +1,21 @@
-# This is the newer version
+# Set the base image to build from 
+FROM node:alpine
 
-FROM node:18-alpine
-
+# set the working directory
 WORKDIR /app
 
-COPY package.json .
+# copy package.json and package-lock.json files
+COPY package.json ./
+COPY package-lock.json ./
 
+# install dependencies
 RUN npm install
 
-RUN npm i -g serve
+# copy everything to /app directory
+COPY ./ ./
 
-COPY . .
+# run the app
+CMD ["npm", "start"]
 
-RUN npm run build
-
-EXPOSE 3000
-
-CMD [ "serve", "-s", "dist" ]
+FROM nginx:alpine
+COPY dist/ /usr/share/nginx/html
