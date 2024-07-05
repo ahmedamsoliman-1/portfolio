@@ -13,11 +13,6 @@ export default defineConfig({
   strictPort: true,
   host: true,
   origin: "http://0.0.0.0:8080",
- },
- server: {
-    port: 80,
-    strictPort: true,
-    host: true,
-    origin: "https://gke.ahmedalimsoliman.com",
+ 
    },
 });
